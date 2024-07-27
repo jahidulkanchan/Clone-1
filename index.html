@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JK_clone</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -16,14 +19,18 @@
           <li><a href="#">FAQ</a></li>
         </ul>
         <div class="logo">Jk_Clone</div>
-        <div class="btn"><a href="#"><i class="fa-solid fa-phone"></i> Book a call</a></div>
+        <div class="btn">
+          <a href="#"><i class="fa-solid fa-phone"></i> Book a call</a>
+        </div>
       </nav>
       <div class="top-content">
         <h5>WITH YOUR DEDICATED CONTENT TEAMS VIRAL TOUCH</h5>
         <div class="home-text">
-          <h1>Grow Super Fast <br />
-            <span style="margin-left: 80px;">On</span></h1>
-          <p class="animate-text">
+          <h1>
+            Grow Super Fast <br />
+            <span style="margin-left: 80px">On</span>
+          </h1>
+          <p class="animate-text" id="text-animation">
             <span>Youtube</span>
             <span>Instagram</span>
             <span>TicTok</span>
@@ -54,17 +61,65 @@
         </p>
         <div class="btn-box">
           <div class="btn"><a href="#">View Pricing</a></div>
-          <div class="btn btn-black"><a href="#"><i class="fa-solid fa-play"></i> Get Start</a></div>
+          <div class="btn btn-black">
+            <a href="#"><i class="fa-solid fa-play"></i> Get Start</a>
+          </div>
         </div>
       </div>
     </header>
+    <section class="payment-section">
+      <div class="container">
+        <div class="payment-info" id="form">
+          <div class="cross-bar"><i class="fa-solid fa-xmark" id="crossBar"></i></div>
+          <form action="#">
+            <div class="box box-1">
+              <div class="item">
+                <label for="name">Name:</label><br>
+              <input type="text" placeholder="Name" id="name">
+              </div>
+              <div class="item">
+                <label for="email">Email:</label><br>
+                <input type="email" placeholder="Email" name="" id="email">
+              </div>
+            </div>
+            <div class="box box-">
+              <div class="item">
+                <label for="option">Payment Method:</label><br>
+                <select name="" id="option">
+                  <option value="bkash">Bkash</option>
+                  <option value="nagad">Nagad</option>
+                  <option value="paypal">Paypal</option>
+                </select>
+              </div>
+              <div class="item">
+                <label for="transaction">Transaction ID:</label><br>
+                <input type="text" placeholder="Transaction id" id="transaction">
+              </div>
+            </div>
+            <div class="box box-">
+              <div class="item">
+                <label for="phone">Mobile Number:</label><br>
+                <input type="number" name="" id="" placeholder="Mobile Number">
+              </div>
+              <div class="item last">
+                <label for="file">Attached File:</label>
+                <input type="file" name="" id="file">
+              </div>
+            </div>
+            <input type="submit" id="submitBtn" value="Submit">
+          </form>
+        </div>
+        <button id="payBtn">Pay Now</button>
+      </div>
+    </section>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script> -->
+     <script src="js/script.js"></script>
     <script>
-      const txts = document.querySelector(".animate-text").children,
-        txtsLen = txts.length;
+      const txts = document.getElementById("text-animation").children,
+      txtsLen = txts.length;
       let index = 0;
-      const textInTimer = 3000,
-        textOutTimer = 2800;
+      const textInTimer = 2000,
+        textOutTimer = 1800;
 
       function animateText() {
         for (let i = 0; i < txtsLen; i++) {
@@ -85,7 +140,6 @@
           animateText();
         }, textInTimer);
       }
-
       window.onload = animateText;
     </script>
   </body>

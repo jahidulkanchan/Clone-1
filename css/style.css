@@ -1,23 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
   margin: 0;
   padding: 0;
 }
-body{
+body {
   overflow-x: hidden;
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
+  background-color: #131313;
 }
-.btn{
+.btn {
   display: inline-block;
 }
-a{
+a {
   text-decoration: none;
 }
-.btn-box{
+.btn-box {
   margin-top: 50px;
 }
-.btn a{
+.btn a {
   background-color: #ffffff;
   padding: 15px 30px;
   color: black;
@@ -26,42 +27,45 @@ a{
   font-size: 22px;
   font-weight: 600;
 }
-header{
+header {
   min-height: 600px;
   background-color: #131313;
-  background-image: radial-gradient(hsla(240, 2%, 48%, .414) 1px, transparent 0);
+  background-image: radial-gradient(
+    hsla(240, 2%, 48%, 0.414) 1px,
+    transparent 0
+  );
   background-size: 50px 50px;
   color: #ffffff;
 }
-ul li{
+ul li {
   list-style: none;
 }
-nav{
+nav {
   padding: 30px 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-nav .menu{
+nav .menu {
   display: flex;
   gap: 25px;
 }
-nav .menu a{
+nav .menu a {
   display: flex;
   gap: 25px;
   color: #ffe8e8;
   font-size: 20px;
 }
-.logo{
+.logo {
   font-size: 40px;
   font-weight: 700;
 }
-nav .btn a{
+nav .btn a {
   background-color: #3a3a3a;
   color: #ffe8e8;
   font-size: 22px;
 }
-.top-content{
+.top-content {
   padding-top: 30px;
   display: flex;
   flex-direction: column;
@@ -69,72 +73,215 @@ nav .btn a{
   align-items: center;
   text-align: center;
 }
-.top-content h5{
+.top-content h5 {
   font-size: 1.25rem;
   color: #dbfa9b;
   font-weight: 500;
 }
-.top-content h1{
+.top-content h1 {
   font-size: 100px;
   line-height: 100px;
   letter-spacing: 2px;
 }
-.top-content p{
+.top-content p {
   font-size: 20px;
   color: #c9c9c9;
 }
-.btn-black a{
+.btn-black a {
   background-color: #3a3a3a;
   color: #ffffff;
 }
 
-
-.home-text h1{
- font-size: 100px;
- color:#ffffff;
- text-align: left;
- line-height: 100px;
- font-weight: 700;
- float: left;
+.home-text h1 {
+  font-size: 
+  100px;
+  line-height: 
+  100px;
+  color: #ffffff;
+  text-align: left;
+  font-weight: 700;
+  float: left;
 }
-.home-text p{
+.home-text p {
   position: absolute;
   top: 270px;
   left: 40%;
- overflow: hidden;
+  overflow: hidden;
 }
-.home-text p span{
-   font-size: 100px;
-   background: -webkit-linear-gradient(#ffffff, #1d1d1d56);
+.home-text p span {
+  line-height: 100px;
+  font-size: 100px;
+  background: -webkit-linear-gradient(#ffffff, #1d1d1d56);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-   font-weight: 700;
-   display: inline-block;
-   line-height: 100px;
-   display: none;
+  font-weight: 700;
+  display: inline-block;
+  display: none;
 }
 
-.home-text p span.text-in{
- display: block;
- animation: textIn .5s ease;
+.home-text p span.text-in {
+  display: block;
+  animation: textIn 0.5s ease;
 }
-.home-text p span.text-out{
- animation: textOut .5s ease;
+.home-text p span.text-out {
+  animation: textOut 0.5s ease;
 }
-@keyframes textIn{
- 0%{
-   transform: translateY(100%);
- }
- 100%{
-   transform: translateY(0%);
- }
+@keyframes textIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
-@keyframes textOut{
- 0%{
-   transform: translateY(0%);
- }
- 100%{
-   transform: translateY(-100%);
-
- }
+@keyframes textOut {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.payment-section {
+  position: relative;
+  min-height: 400px;
+  padding: 20px 0px;
+  background-color: #131313;
+}
+.payment-section .container {
+  padding: 0px 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment-info {
+  position: relative;
+  margin: 50px 0px;
+  padding: 30px 0px;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 15px;
+  background-color: #cbcaca;
+  color: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+.payment-info .cross-bar {
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+form {
+  padding: 50px;
+}
+#form {
+  transform: scale(0);
+  height: 0px;
+}
+form input,
+form select {
+  margin: 8px 0px 8px 0px;
+  padding: 15px 10px;
+  min-width: 280px;
+  border: 1px solid #00000000;
+  border-radius: 7px;
+}
+#payBtn {
+  position: absolute;
+  top: 200px;
+  padding: 15px 50px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-out;
+}
+#submitBtn {
+  position: absolute;
+  right: 40px;
+  bottom: 10px;
+  background-color: #464646;
+  color: #ffffff;
+  font-size: 20px;
+  border: 1px solid #000000;
+}
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+label {
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (max-width: 992px) {
+  .box {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  nav {
+    padding: 30px 10px;
+  }
+  .home-text h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .home-text p {
+    position: absolute;
+    top: 225px;
+    left: 46%;
+    overflow: hidden;
+  }
+  .home-text p span {
+    line-height: 40px;
+    font-size: 40px;
+  }
+}
+@media (max-width: 768px) {
+  nav .menu {
+    display: flex;
+    gap: 25px;
+    display: none;
+  }
+  .logo {
+    font-size: 30px;
+  }
+  nav .btn a {
+    background-color: #3a3a3a;
+    color: #ffe8e8;
+    font-size: 16px;
+  }
+  .btn-box .btn {
+    margin-bottom: 50px;
+  }
+  .top-content {
+    padding: 30px 10px;
+  }
+  form {
+    padding: 10px;
+  }
+  .last {
+    margin-bottom: 50px;
+  }
+  #submitBtn {
+    position: absolute;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    max-width: 80%;
+  }
+  form input,
+  form select {
+    margin: 8px 0px 8px 0px;
+    padding: 15px 10px;
+    min-width: 240px;
+    border: 1px solid #00000000;
+    border-radius: 7px;
+  }
+  .item{
+    text-align: center;
+  }
 }
